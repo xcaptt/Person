@@ -16,6 +16,7 @@
 
 body {
     background-color: var(--cor0);
+    text-align: center;
 }
 
 a.externo:after {
@@ -111,6 +112,11 @@ main a:hover{
     color: var(--cor4);
 }
 
+img {
+    width: 300px;
+    height: 400px;
+}
+
 main img {
     width: 100%;
 }
@@ -121,21 +127,60 @@ main img.pq {
     margin: auto;
 }
 
-div.video {
-    background-color: var(--cor5);
-    margin: 0px -20px 30px -20px;
-    padding: 20px;
-    padding-bottom: 59%;
-    position: relative;
+div.q {
+    background-image: url('imagens/propaganda.jpg');
+    margin: auto;
+    background-position: bottom center;
+    display: block;
+    border: 20px black;
+    border-radius: 10px;
+    background-color: lightgray;
+    width: 500px;
+    height: 500px;
+    transform: translate(10%, 1%);
 }
 
-div.video > iframe {
-    position: absolute;
-    top: 5%;
-    left: 5%;
-    width: 90%;
-    height: 90%;
+div.q1 {
+    background-image: url('imagens/c1.jpg');
+    margin: auto;
+    background-position: center;
+    display: block;
+    border: 2px black;
+    border-radius: 10px;
+    background-color: lightgray;
+    width: 500px;
+    height: 500px;
+    transform: translate(-6%, 1%);
 }
+
+
+div.q2 {
+    background-image: url('imagens/m1.jpg');
+    margin: auto;
+    background-position: center;
+    display: block;
+    border: 2px black;
+    border-radius: 10px;
+    background-color: lightgray;
+    width: 500px;
+    height: 500px;
+    transform: translate(8%, 1%);
+}
+div.q3 {
+    background-image: url('imagens/m2.jpg');
+    margin: auto;
+    background-position: left center;
+    display: block;
+    border: 2px black;
+    border-radius: 10px;
+    background-color: lightgray;
+    width: 500px;
+    height: 500px;
+    left: 50%;
+    right: 50%;
+    transform: translate(-10%, 1%);
+}
+
 
 aside {
     background-color: var(--cor1);
