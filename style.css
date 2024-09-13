@@ -1,8 +1,8 @@
 @charset "UTF-8";
 :root {
-    --cor0:rgb(165, 207, 255);
-    --cor1:blue
-    --cor2:
+    --cor0:rgb(253, 253, 253);
+    --cor1:rgb(0, 42, 90);
+    --cor2:rgb(0, 0, 0);
     --cor3:
     --cor4:
     --cor5:
@@ -28,25 +28,31 @@ header {
     min-height: 150px;
     text-align: center;
     padding-top: 40px;
+    background-color: var(--cor1);
 }
 
 header > h1#principal {
     text-decoration: none;
     font-weight: bold;
-    color: var(--cor5);
+    color: var(--cor1);
     background-color: var(--cor1);
     padding: 2px 6px;
 }
 h1#principal > a {
     text-decoration: none;
     font-weight: bold;
-    color: white;
+    color: var(--cor0);
     background-color: var(--cor1);
     padding: 2px 6px;
 }
+h2 {
+    font-size: 24px;
+    margin-bottom: 15px;
+    color: var(--cor3);
+}
 
 header > p {
-    color: white;
+    color: var(--cor0);
     font-size: 1.2em;
     max-width: 500px;
     padding-right: 10px;
@@ -55,13 +61,13 @@ header > p {
 }
 
 nav {
-  
+    background-color: var(--cor1);
     padding: 10px;
     box-shadow: 0px 7px 7px rgba(0, 0, 0, 0.126);
 }
 
 nav > a {
-    color: white;
+    color: var(--cor0);
     padding: 10px;
     border-radius: 3px;
     text-decoration: none;
@@ -75,23 +81,39 @@ nav > a:hover {
 }
 
 input {
-    color: white;
+    color: var(--cor3);
     padding: 2px;
     border-radius: 1px;
     text-decoration: none;
 
 }
-
-main {
-    min-width: 320px;
-    max-width: 1000px;
-    margin: auto;
-    margin-bottom: 30px;
+article {
     padding: 20px;
-    background-color: white;
+    max-width: 1200px;
+    margin: 0 auto; /* Centraliza o conteúdo */
+    background-color: var(--cor0);
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.411);
     border-radius: 0px 0px 10px 10px;
 }
+
+main{
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Duas colunas com a mesma largura */
+    gap: 20px; /* Espaço entre as colunas */
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto; /* Centraliza o conteúdo */
+    background-color: var(--cor0);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.411);
+    border-radius: 0px 0px 10px 10px;
+}
+
+.left-column, .right-column {
+    background-color: var(--cor0);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    }
 
 main h1 {
     color: var(--cor5);
@@ -102,13 +124,6 @@ main h2 {
     background-image: linear-gradient(to right, var(--cor1), transparent);
 }
 
-main p {
-    margin: 15px 0px ;
-    text-align: justify;
-    text-indent: 30px;
-    font-size: 1em;
-    line-height: 1.5em;
-}
 
 main strong {
     color: var(--cor5);
@@ -118,8 +133,8 @@ main strong {
 main a {
     text-decoration: none;
     font-weight: bold;
-    color: var(--cor5);
-    background-color: var(--cor1);
+    color: var(--cor3);
+    background-image: linear-gradient(to right, var(--cor1), transparent);
     padding: 2px 6px;
 }
 
@@ -127,6 +142,12 @@ main a:hover{
     text-decoration: underline;
     color: var(--cor4);
 }
+img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 15px;
+    border-radius: 0; /* Sem bordas arredondadas */
+    }
 
 img.j {
     width: 300px;
@@ -134,13 +155,15 @@ img.j {
 }
 
 main img {
-    width: 100%;
+    max-width: 100%;
+    height: auto;
+    margin: 20px 0;
 }
 
 main img.pq {
     max-width: 350px;
     display: block;
-    margin: auto;
+    margin: 20px auto;
 }
 
 
@@ -153,7 +176,7 @@ aside {
 
 aside > h3 {
     background-color: var(--cor4);
-    color: white;
+    color: var(--cor0);
     padding: 10px;
     margin: -10px -10px 0px -10px;
     border-radius: 10px 10px 0px 0px;
@@ -165,8 +188,30 @@ aside > ul {
     columns: 2;
 }
 
+@media (max-width: 768px) {
+    main {
+        grid-template-columns: 1fr; /* Coloca uma coluna em telas menores */
+    }
+}
+
 footer {
-    background-color: var(--cor5);
+    background-color: var(--cor1);
     color: white;
     text-align: center;
+    padding: 20px;
+    margin-top: 20px;
+    text-decoration: none;
+}
+
+footer ul {
+    list-style-type: none;
+    padding: 0;
+    text-decoration: none;
+}
+
+footer ul li a {
+    display: inline;
+    margin: 0 10px;
+    text-decoration: none;
+    color: white;
 }

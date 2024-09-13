@@ -7,7 +7,7 @@
     <title>Person Elite</title>
      <link rel="stylesheet" href="style.css"/>
 <style>
-h1 {
+h1.pt {
     text-align: center; font-size: 45px;
 }
 h2 {
@@ -19,17 +19,18 @@ h2 {
     <header>
         <h1 id="principal"><a href="index.html">PERSON</a></h1>
       </header>
+    
       <nav>
         <a href="pag2.html">Person's</a>
         <a href="pente.html">Notícias</a>
         <a href="pente.html">Entretenimento</a>
         <a href="shopping.html">Shopping</a>
-        <input type="text" placeholder="Buscar..." required><button type="submit"></button> 
+        <input type="search" name="busca" id="ibus" placeholder="Buscar..." onkeypress="if(event.key === 'Enter') buscar();">
+        <button onclick="buscar()">Pesquisar</button> 
       </nav>
 
-    <main>
         <article>
-            <h1>A história do pente afro e a sua importância vai muito além do que imaginamos!</h1>
+            <h1 class="pt">A história do pente afro e a sua importância vai muito além do que imaginamos!</h1>
 
       <h3>O pente afro é bastante popular nos dias atuais, contudo, este acessório é muito mais antigo do que aparenta. Ele tem sido um símbolo de status em muitas sociedades africanas durante séculos. Eles são usados desde os tempos pré-históricos, tendo sido descobertos em formas muito refinadas em assentamentos que datam de cinco mil anos atrás.</h3>
 
@@ -65,7 +66,7 @@ O pente afro, basicamente, consiste numa haste na vertical, com os "dentes” en
 <a href="https://www.jornaldeangola.ao/ao/noticias/o-milenar-pente-afro/">Fonte: Jornal de Angola</a>
       </p>
         </article>
-    </main>
+ 
         <a href="index.html" rel="prev">←</a>
         <a href="pag2.html" rel="next">→</a>
         

@@ -1,60 +1,52 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="imagens/favicon.ico" type="image/x-icon">
-    <title>Person Elite</title>
-     <link rel="stylesheet" href="style.css"/>
+    <title>PERSON</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <header>
     <h1 id="principal"><a href="index.html">PERSON</a></h1>
   </header>
+
   <nav>
     <a href="pag2.html">Person's</a>
     <a href="pente.html">Notícias</a>
     <a href="pente.html">Entretenimento</a>
     <a href="shopping.html">Shopping</a>
-    <input type="text" placeholder="Buscar..." required><button type="submit"></button> 
+    <input type="search" name="busca" id="ibus" placeholder="Buscar..." onkeypress="if(event.key === 'Enter') buscar();">
+    <button onclick="buscar()">Pesquisar</button> 
   </nav>
-   <main>
-
-    <h1>
-      <a href="pag2.html">Person's</a>
-    </h1>
-    <picture> <source media="(max-width: 550px)" srcset="imagens/persons.pq.jpg">
-     <img src="imagens/persons2.0.jpg" alt="persons">
-    </picture>
-
-      <picture> <source media="(max-width: 550px)"srcset="imagens/pente.pq.jpg">
-        <a href="pente.html"><img src="imagens/pente.jpg" alt=""></a>
-      </picture>
- 
+  <main id="resultados">
     
-  
-    <p >História do <a href="pente.html" rel="next">Pente Afro</a> </p> <br>
-
-    <p>Conheça mais os nossos <a href="pag2.html" rel="next">Person's</a></p>
-
-    <p><a href="pag2.html" rel="next">→</a></p> 
-  
   </main>
-  <aside>
-  
-  </aside>
-<footer>
-  <h1>PERSON</h1>
-  <ul>
-    <li>NEWSLETTERS</li>
-    <a href="https://www.instagram.com/p.e.r.s.o.n._magazine/?igsh=c3E2MTlhOTFrMGs%3D">
-      <li>Siga-nos</li>
-    </a>
-    <li>Sobre nós</li>
-    <li>Fale conosco</li>
-  </ul>
-  <br>
-Site criado por <a href="https://www.instagram.com/xcaptt/">Claudia Capeletti.</a>
-</footer>
+  <main>
+    <section class="left-column">
+      <h2>Person's</h2>
+      <img src="imagens/persons2.0.jpg" alt="persons">
+      <p>História do <a href="pente.html" rel="next">Pente Afro</a></p>
+    </section>
+
+    <section class="right-column">
+      <h2>Notícias</h2>
+      <p>Conheça mais os nossos <a href="pag2.html" rel="next">Person's</a></p>
+   
+    </section>
+  </main>
+  <a href="pag2.html" rel="next">→</a>
+  <footer>
+    <h1>PERSON</h1>
+    <ul>
+      <li>NEWSLETTERS</li>
+      <li><a href="https://www.instagram.com/p.e.r.s.o.n._magazine/?igsh=c3E2MTlhOTFrMGs%3D">Siga-nos</a></li>
+      <li>Sobre nós</li>
+      <li><a href="faleconosco.html">Fale conosco</a></li>
+      <li>Site criado por<a href="https://www.instagram.com/xcaptt/">Claudia Capeletti</a></li>
+    </ul>
+  </footer>
+  <script src="app.js"></script>
 </body>
+
 </html>

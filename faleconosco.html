@@ -8,6 +8,29 @@
      <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
-    <form action="faleconosco.html">sobre</form>
+    <header>
+        <h1 id="principal"><a href="index.html">PERSON</a></h1>
+      </header>
+    
+      <nav>
+        <a href="pag2.html">Person's</a>
+        <a href="pente.html">Notícias</a>
+        <a href="pente.html">Entretenimento</a>
+        <a href="shopping.html">Shopping</a>
+        <input type="search" name="busca" id="ibus" placeholder="Buscar..." onkeypress="if(event.key === 'Enter') buscar();">
+        <button onclick="buscar()">Pesquisar</button> 
+      </nav>
+      
+    <form action="app.js" method="post">
+        <p>
+            <label for="imsg">Fale conosco</label> <br>
+            <textarea name="msg" id="imsg" cols="30" rows="10"></textarea>
+        </p>
+
+        <p>
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Limpar">
+        </p>
+    </form>
 </body>
 </html>
